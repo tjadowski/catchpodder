@@ -66,11 +66,7 @@ function usage {
 }
 
 function itunes {
-  castID=$1
-  wget -t $retry -T $timeout -q -c -U 'iTunes/10.1 (Windows; U; Microsoft Windows XP Home Edition Service Pack 2 (Build 2600)) DPI/96' -O ./itunes-link.html https://itunes.apple.com/WebObjects/DZR.woa/wa/viewPodcast?id=$castID
-  url=`grep -rn 'feed-url' ./itunes-link.html | awk '{FS="feed-url"; print $2}' | awk '{ FS="="; print $2 }' | awk '{ FS="\""; print $2 }' | uniq | grep http`
-  init $url
-  rm ./itunes-link.html
+  init https://pcr.apple.com/id$1
 }
 
 function downloader {

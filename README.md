@@ -32,6 +32,7 @@ BUGS:
 
 CHANGELOG:
 
+- 06/25/2018: Fix CatchPodd#01
 - 03/30/2018: Import from old repo
 - 01/15/2017: Resolved CatchPodd#01
 
